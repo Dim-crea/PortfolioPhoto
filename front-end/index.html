@@ -20,15 +20,21 @@
             }
         }
     </script>
+    <style>
+        html{
+            scroll-behavior: smooth; 
+        }
+    </style>
 </head>
 <body>
-    <nav class="sticky py-4 ">
+    <section class="h-screen relative">
+    <nav class=" py-4 bg-gray-300 border rounded-b-xl">
         <ul class="flex justify-end mx-5">
             <li class="hidden">PRéSENTATION</li>
             <li class="hidden">PORTAIT</li>
             <li class="hidden">EVENEMENTIELLE</li>
             <li class="hidden">CORPORATE</li>
-            <li class="text-lg">CONTACT</li>
+            <li class="text-lg"><a href="#sectionContact">CONTACT</a></li>
         </ul>
     </nav>
     <h3 class="text-center my-10 text-2xl" style="letter-spacing: 0.2em;">Bienvenue</h3>
@@ -52,26 +58,74 @@
             </li>
             <li class="flex mt-2">
                 <img src="./assets/Line.svg" alt="">
-                <a class="ml-3 text-xl" style="letter-spacing: 0.2em;">Evenementielle</a>
+                <a href="./pages/evenementielle.html" class="ml-3 text-xl" style="letter-spacing: 0.2em;">EVENEMENTIELLE</a>
             </li>
             <li class="flex mt-2">
                 <img src="./assets/Line.svg" alt="">
-                <a class="ml-3 text-xl" style="letter-spacing: 0.2em;">CORPORATE</a>
+                <a href="./pages/corporate.html" class="ml-3 text-xl" style="letter-spacing: 0.2em;">CORPORATE</a>
             </li>
             <li class="flex mt-2">
                 <img src="./assets/Line.svg" alt="">
-                <a class="ml-3 text-xl" style="letter-spacing: 0.2em;">Contact</a>
+                <a href="#sectionContact" class="ml-3 text-xl" style="letter-spacing: 0.2em;">CONTACT</a>
             </li>
         </ul>
     </div>
     
-    <div class="flex flex-col items-center fixed bottom-0 w-full my-5">
+    <div class="flex flex-col items-center absolute bottom-0 w-full my-5">
         <p class="text-BrownAccent " style="letter-spacing: 0.2em;">SCROLLEZ ET DISCUTONS</p>
         <div class="bg-gray-300 h-10 w-5 rounded-xl ">
             <img src="./assets/Ellipse Scroll.svg" alt="" style="margin-left: 10%;margin-top: 10%;">
         </div>
     </div>
-    
+    </section>
 
+    <section class="h-screen" id="sectionContact">
+        <div class="mt-8">
+            <h2 class="text-BrownAccent text-2xl text-center">CONTACT</h2>
+        </div>
+        <form action="" method="post" class="flex flex-col items-center my-8 mx-8 border rounded-2xl bg-gray-300 ">
+
+            <label for="NomClient" class="mt-5">Nom :</label>
+            <input type="text" id="NomClient" name="NomClient" class="border rounded-xl"><br>
+
+            <label for="PrénomClient">Prénom :</label>
+            <input type="text" id="PrénomClient" nom="PrénomClient" class="border rounded-xl"><br>
+            
+            <label for="EmailClient">Email :</label>
+            <input type="text" id="EmailClient" name="EmailClient" class="border rounded-xl"><br>
+
+            <label for="TéléphoneClient">Numéro de téléphone :</label>
+            <input type="text" id="TéléphoneClient" name="TéléphoneClient" class="border rounded-xl"><br>
+
+            <label for="ProjetClient">Projet :</label>
+
+            <div>
+                <input type="checkbox" id="ProjetPortrait" name="ProjetPortrait" value="Portrait">
+                <label for="ProjetPortrait">PORTAIT</label><br>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="ProjetEvenementielle" name="ProjetEvenementielle" value="Evenementielle">
+                <label for="ProjetEvenementielle">EVENEMENTIELLE</label><br>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="ProjetCorporate" name="ProjetCorporate" value="Corporate">
+                <label for="ProjetCorporate">CORPORATE</label>
+            </div>
+            
+            <div class="my-5 px-5 py-1 border border-yellow-900 rounded-full text-BrownAccent">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+        <div class="text-center py-5 mx-8 border rounded-2xl bg-gray-300">
+            <h3 class="mb-5 text-BrownAccent">HAUTERVILLE DIMITRY</h3>
+            <p>Email : </p>
+            <a href="mailto:hauterville.dimitry@gmail.com" class="text-BrownAccent">hauterville.dimitry@gmail.com</a>
+            <p class="mt-2">N° de téléphone : </p>
+            <a href="tel:0782268029" class="text-BrownAccent">0782268029</a>
+        </div>
+    </section>
 </body>
 </html>
