@@ -7,12 +7,52 @@ body {
 h1{
     font-family: "Paytone One", sans-serif;
     text-shadow: rgb(245, 193, 124) 0px 0 50px;
+    animation: defilArrow linear 1s;
 }
 
 #textPhotographe{
-    
+    animation: MoveTextPhoto linear;
+    animation-timeline: scroll();
+    overflow: hidden;
 }
 
-/* @keyframes{
+#textVidéaste{
+    animation: MoveTextVidéaste linear;
+    animation-timeline: scroll();
+    overflow: hidden;
+}
 
-} */
+
+
+@keyframes ApparitionDégradé{
+    from{
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+        
+    }
+}
+
+@keyframes MoveTextPhoto{
+    from{
+        margin-left: -50px;
+        transform: rotate(0deg);
+    }
+    to{
+        margin-left: 350px;
+        transform: rotate(-15deg);
+    }
+}
+
+@keyframes MoveTextVidéaste{
+    from{
+        margin-left: 50px;
+        transform: rotate(0deg);
+    }
+    to{
+        margin-left: -350px;
+        transform: rotate(-15deg);
+    }
+}
